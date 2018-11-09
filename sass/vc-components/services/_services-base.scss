@@ -1,0 +1,202 @@
+section.services {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, 300px);
+        position: relative;
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            cursor: pointer;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: color 1s;
+
+            .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: background-color 1s;
+            }
+
+            .line {
+                position: absolute;
+                background-color: white;
+                transition: background-color 1s;
+            }
+
+            h3 {
+                position: relative;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                color: rgb(223, 184, 127);
+
+                .overlay {
+                    background-color: transparent;
+                }
+
+                .line {
+                    background-color: rgb(223, 184, 127);
+                }
+            }
+        }
+    }
+
+    .item1 {
+        background-image: url('../img/travel.jpg');
+
+        .overlay {
+            background-color: rgb(45, 45, 45);
+        }
+
+        .line {
+            top: 0;
+            height: 40px;
+            width: 4px;
+            margin: 0 auto;
+        }
+    }
+
+    .item2 {
+        background: url('../img/global.jpg');
+
+        .overlay {
+            background-color: rgb(56, 56, 56);
+        }
+    }
+
+    .item3 {
+        background: url('../img/state.jpg');
+        background-position: center;
+
+        .overlay {
+            background-color: rgb(45, 45, 45);
+        }
+    }
+
+    .item4 {
+        perspective-origin: top;
+        background: url('../img/vip.jpg');
+
+        .overlay {
+            background-color: rgb(63, 63, 63);
+        }
+
+        .line {
+            right: 0;
+            width: 40px;
+            height: 4px;
+            margin: auto 0;
+        }
+    }
+
+    .item5 {
+        background: url('../img/shopper.jpg');
+
+        .overlay {
+            background-color: rgb(63, 63, 63);
+        }
+
+        .line {
+            left: 0;
+            width: 40px;
+            height: 4px;
+            margin: auto 0;
+        }
+    }
+
+    .item6 {
+        background: url('../img/management.jpg');
+
+        .overlay {
+            background-color: rgb(56, 56, 56);
+        }
+    }
+
+    .item7 {
+        background: url('../img/business.jpg');
+
+        .overlay {
+            background-color: rgb(45, 45, 45);
+        }
+
+        .line {
+            bottom: 0;
+            height: 40px;
+            width: 4px;
+            margin: 0 auto;
+        }
+    }
+
+
+    @media screen and (min-width: 550px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 2fr);
+            grid-template-rows: repeat(5, 300px);
+            grid-gap: 10px;
+            .item3 {
+                grid-column: 1 / 3;
+            }
+
+            .item4 {
+                grid-column: 1 / 3;
+            }
+
+            .item5 {
+                grid-column: 1 / 3;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-rows: repeat(3, 300px);
+
+            .item3 {
+                grid-column: 3 / 4;
+                grid-row: 1 / 3;
+            }
+
+            .item4 {
+                grid-column: 1 / 3;
+            }
+
+            .item5 {
+                grid-column: auto;
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .grid-container {
+            grid-template-columns: repeat(5, 5fr);
+            grid-template-rows: repeat(2, 300px);
+
+            .item3 {
+                grid-column: 3 / 4;
+                grid-row: 1 / 3;
+            }
+
+            .item4 {
+                grid-column: 4 / 6;
+            }
+
+            .item5 {
+                grid-column: 1 / 3;
+            }
+        }
+
+        .services_1 {
+            height: 100%;
+        }
+    }
+}

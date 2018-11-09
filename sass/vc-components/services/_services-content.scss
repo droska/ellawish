@@ -1,0 +1,40 @@
+section.services {
+    overflow: hidden;
+    position: relative;
+
+    .services_item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all 1s;
+        width: 100%;
+        height: 100%;
+    }
+
+    .services_1 {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-image: url(../img/travel.jpg);
+    }
+
+    .services_4 {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-image: url('../img/vip.jpg');
+    }
+
+    .cuadrado {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        background-color: purple;
+    }
+
+    .cuadrado4 {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        background-color: blue;
+    }
+}
